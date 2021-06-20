@@ -51,7 +51,7 @@ const SubHeader = styled.h3`
 const CellPhoneImage = styled.img`
   width: 330px;
   height: 395px;
-  margin: 68px 0;
+  margin: 68px auto;
 `;
 
 const About = () => {

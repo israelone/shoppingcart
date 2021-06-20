@@ -7,6 +7,7 @@ import React, { useState, useContext } from "react";
 import Brand from "./components/brand/brand";
 import Reviews from "./components/reviews/reviews";
 import Contact from "./components/contact/contact";
+
 const products = [
   {
     name: "",
