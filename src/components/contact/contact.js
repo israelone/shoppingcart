@@ -31,18 +31,28 @@ const SendButton = styled.button`
   width: 50%;
   font-size: 21px;
 `;
+const FormContainer = styled(Container)`
+width:95%;
+padding: 35px 0;
+margin:0 auto;
+-webkit-box-shadow: 0px 0px 10px 3px rgba(186,186,186,1);
+-moz-box-shadow: 0px 0px 10px 3px rgba(186,186,186,1);
+box-shadow: 0px 0px 10px 3px rgba(186,186,186,1);`
+
 
 const Contact = () => {
   return (
     <Container>
       <Header>Contact Us</Header>
-      <ContactForm>
-        <Input value={"Your Name"} />
-        <Input value={"Email"} />
-        <Input value={"Phone"} />
-        <Input value={"Message"} />
-        <SendButton>Send</SendButton>
-      </ContactForm>
+      <FormContainer >
+        <ContactForm>
+          <Input value={"Your Name"} />
+          <Input value={"Email"} />
+          <Input value={"Phone"} />
+          <Input value={"Message"} />
+          <SendButton>Send</SendButton>
+        </ContactForm>
+      </FormContainer>
     </Container>
   );
 };
