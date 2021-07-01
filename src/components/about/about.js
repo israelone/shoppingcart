@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import Image from "../../assets/images/about/about.png";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import Image from '../../assets/images/about/about.png';
 
 const Container = styled.div`
   display: grid;
@@ -10,47 +10,47 @@ const ImageContainer = styled(Container)``;
 
 const TextContainer = styled(Container)`
   text-align: end;
-  padding: 10px;
+  padding: 25px;
   border-bottom: 8px solid red;
 `;
 
 const Header = styled.h2`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-weight: 700;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
   margin: 5px;
   color: grey;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-weight: 700;
 `;
 const Paragraph = styled.p`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-weight: 200;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
 `;
 const SubHeader = styled.h3`
   font-size: 28px;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-weight: 700;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
   margin: 0;
 `;
 
 const CellPhoneImage = styled.img`
-  width: 330px;
-  height: 395px;
+  width: 83vw;
+  height: 85vw;
   margin: 68px auto;
 `;
 
