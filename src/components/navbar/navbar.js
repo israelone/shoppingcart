@@ -7,6 +7,9 @@ const Icon = styled.i``;
 
 const Container = styled.div`
   display: grid;
+  @media screen and (min-width: 575px) {
+    grid-template-columns: 2fr 5fr;
+  }
   /* color: black;
   height: 80px;
   width: 100%;
@@ -95,6 +98,10 @@ const NavigationContainer = styled.div`
   width: 90%;
   margin: 0 auto;
   height: 40px;
+  @media screen and (min-width: 575px) {
+    background-color: black;
+    align-self: center;
+  }
   /* background-color: red;
   display: flex; */
 `;
@@ -106,7 +113,10 @@ const LogoContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
   flex-direction: column;
-
+  @media screen and (min-width: 575px) {
+    height: 60px;
+    justify-content: space-around;
+  }
   /* position: relative;
   height: 100px;
   background: white;
@@ -171,16 +181,28 @@ const Logo = styled.img`
   width: 178px;
   height: 50px;
   margin-bottom: 10px;
+  @media screen and (min-width: 575px) {
+    width: 100px;
+    height: 30px;
+    margin: 0;
+  }
 `;
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
-
+  const [screenSize, setScreenSize] = useState(575);
   const showMenuHandler = () => {
     let currentStatus = showMenu;
     console.log('working');
     setShowMenu(!currentStatus);
   };
+
+  useEffect(() => {
+    window.addEventListener('resize', (result) => {
+      console.log(typeof result.target.innerWidth);
+      setScreenSize(result.target.innerWidth);
+    });
+  }, []);
 
   return (
     <Container>
