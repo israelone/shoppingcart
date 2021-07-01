@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import LogoPicture from '../../assets/images/Logo/logo.png';
 // Everything commented out is for laptop media size
 
 const Icon = styled.i``;
@@ -101,10 +101,12 @@ const NavigationContainer = styled.div`
 
 const LogoContainer = styled.div`
   width: 100%;
-  color: red;
-  text-align: center;
   height: 100px;
-  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+
   /* position: relative;
   height: 100px;
   background: white;
@@ -165,60 +167,67 @@ const ContactInfoContainer = styled.div`
   } */
 `;
 
-const Logo = styled.img``;
+const Logo = styled.img`
+  width: 178px;
+  height: 50px;
+  margin-bottom: 10px;
+`;
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const showMenuHandler = () => {
     let currentStatus = showMenu;
-    console.log("working");
+    console.log('working');
     setShowMenu(!currentStatus);
   };
+
   return (
     <Container>
-      <LogoContainer>Pomato</LogoContainer>
+      <LogoContainer>
+        <Logo src={LogoPicture}></Logo>
+      </LogoContainer>
       <NavigationContainer>
         <MenuIcon onClick={() => showMenuHandler()}>
-          <Icon className={showMenu ? "fas fa-times" : "fas fa-bars"}></Icon>
+          <Icon className={showMenu ? 'fas fa-times' : 'fas fa-bars'}></Icon>
         </MenuIcon>
         <List
-          showMenu={showMenu ? "initial" : "hidden"}
-          animation={showMenu ? "initial" : "0"}
+          showMenu={showMenu ? 'initial' : 'hidden'}
+          animation={showMenu ? 'initial' : '0'}
         >
           <ListElement
-            showMenu={showMenu ? "10px 0 10px 10px" : "0"}
-            animation={showMenu ? "initial" : "0"}
+            showMenu={showMenu ? '10px 0 10px 10px' : '0'}
+            animation={showMenu ? 'initial' : '0'}
           >
             <Link>Home</Link>
           </ListElement>
           <ListElement
-            showMenu={showMenu ? "10px 0 10px 10px" : "0"}
-            animation={showMenu ? "initial" : "0"}
+            showMenu={showMenu ? '10px 0 10px 10px' : '0'}
+            animation={showMenu ? 'initial' : '0'}
           >
             <Link>About</Link>
           </ListElement>
           <ListElement
-            showMenu={showMenu ? "10px 0 10px 10px" : "0"}
-            animation={showMenu ? "initial" : "0"}
+            showMenu={showMenu ? '10px 0 10px 10px' : '0'}
+            animation={showMenu ? 'initial' : '0'}
           >
             <Link>Brand</Link>
           </ListElement>
           <ListElement
-            showMenu={showMenu ? "10px 0 10px 10px" : "0"}
-            animation={showMenu ? "initial" : "0"}
+            showMenu={showMenu ? '10px 0 10px 10px' : '0'}
+            animation={showMenu ? 'initial' : '0'}
           >
             <Link>Specials</Link>
           </ListElement>
           <ListElement
-            showMenu={showMenu ? "10px 0 10px 10px" : "0"}
-            animation={showMenu ? "initial" : "0"}
+            showMenu={showMenu ? '10px 0 10px 10px' : '0'}
+            animation={showMenu ? 'initial' : '0'}
           >
             <Link>Contact Us</Link>
           </ListElement>
           <ListElement
-            showMenu={showMenu ? "10px 0 10px 10px" : "0"}
-            animation={showMenu ? "initial" : "0"}
+            showMenu={showMenu ? '10px 0 10px 10px' : '0'}
+            animation={showMenu ? 'initial' : '0'}
           >
             <Icon className="fas fa-shopping-cart"></Icon>
             <CartStatus>0</CartStatus>
