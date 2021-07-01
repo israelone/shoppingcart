@@ -1,17 +1,21 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import CellPhone from "../../../assets/images/cell phones/firstProduct.png";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import CellPhone from '../../../assets/images/cell phones/firstProduct.png';
 
 const Container = styled.div`
     display: flex;
     background-color: white;
     justify-content: space-evenly;
     width: 94%;
+
     height: fit-content;
     margin: 15px auto;
     flex-direction: column;
     align-content: stretch;
     align-items: center;
+    @media screen and (min-width: 575px) {
+    width:43%;
+  }
 }
 `;
 
@@ -46,10 +50,10 @@ const Product = (props) => {
       <ProductTitle>$100</ProductTitle>
       <ProductPrice>Name</ProductPrice>
       <RatingContainer>
-        <Rating className={"fas fa-star"} />
-        <Rating className={"fas fa-star"} />
-        <Rating className={"fas fa-star"} />
-        <Rating className={"fas fa-star"} />
+        <Rating className={'fas fa-star'} />
+        <Rating className={'fas fa-star'} />
+        <Rating className={'fas fa-star'} />
+        <Rating className={'fas fa-star'} />
       </RatingContainer>
     </Container>
   );
