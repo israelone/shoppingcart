@@ -43,6 +43,7 @@ const LinksList = styled.ul`
   display: flex;
   list-style: none;
   justify-content: space-evenly;
+  padding:0 ;
 `;
 
 const Link = styled.li``;
