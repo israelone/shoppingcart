@@ -26,13 +26,29 @@ const Input = styled.input`
   padding-left: 10px;
 `;
 
+//media query not working with extended component
+const NameInput = styled(Input)`
+  @media screen and (min-width: 575px) {
+    width: 33%;
+  }
+`;
+
+const EmailInput = styled(Input)`
+  @media screen and (min-width: 575px) {
+    width: 33%;
+  }
+`;
+
 const SendButton = styled.button`
   background-color: black;
   color: white;
   height: 50px;
-  width: 50%;
+  width: 40%;
   font-size: 21px;
+  border: none;
+  margin-top: 25px;
 `;
+
 const FormContainer = styled(Container)`
   width: 95%;
   padding: 35px 0;
