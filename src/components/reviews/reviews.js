@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
 const Container = styled.div``;
 
 const Header = styled.h2`
-  margin-left: 10px;
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
+  margin: 50px 0 50px 10px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
 `;
 
 const SliderContainer = styled(Container)`
@@ -17,7 +17,7 @@ const SliderContainer = styled(Container)`
 
 const Slider = styled(Container)`
   background-color: white;
-  width: 350px;
+  width: 90%;
   height: 350px;
   margin: 50px auto;
 `;
