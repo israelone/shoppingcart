@@ -3,10 +3,19 @@ import styled from 'styled-components';
 import Image from '../../assets/images/about/about.png';
 
 const Container = styled.div`
-  display: grid;
+  display: flex;
   border-bottom: 8px solid red;
+  flex-direction: column;
   ${'' /* Media query for laptop */}
+
   @media screen and (min-width: 930px) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 575px) {
+    flex-direction: row;
+    align-items: center;
   }
 `;
 
@@ -14,10 +23,9 @@ const ImageContainer = styled(Container)`
   border: none;
 `;
 
-const TextContainer = styled(Container)`
+const TextContainer = styled.div`
   text-align: end;
   padding: 25px;
-  border: none;
 `;
 
 const Header = styled.h2`
@@ -58,6 +66,15 @@ const CellPhoneImage = styled.img`
   width: 83vw;
   height: 85vw;
   margin: 68px auto;
+
+  @media screen and (min-width: 930px) {
+    width: 50vw;
+    height: 48vw;
+  }
+  @media screen and (min-width: 575px) {
+    width: 50vw;
+    height: 48vw;
+  }
 `;
 
 const About = () => {
