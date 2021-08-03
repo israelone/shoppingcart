@@ -4,14 +4,20 @@ import Image from '../../assets/images/about/about.png';
 
 const Container = styled.div`
   display: grid;
+  border-bottom: 8px solid red;
+  ${'' /* Media query for laptop */}
+  @media screen and (min-width: 930px) {
+  }
 `;
 
-const ImageContainer = styled(Container)``;
+const ImageContainer = styled(Container)`
+  border: none;
+`;
 
 const TextContainer = styled(Container)`
   text-align: end;
   padding: 25px;
-  border-bottom: 8px solid red;
+  border: none;
 `;
 
 const Header = styled.h2`
