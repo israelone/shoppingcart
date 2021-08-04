@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   background-color: black;
   color: white;
-  padding-bottom: 35px;
+  padding-bottom: 5px;
 `;
 
 const Header = styled.h1`
@@ -44,11 +44,15 @@ const PhoneNumber = styled(Paragraph)``;
 const LinksList = styled.ul`
   display: flex;
   list-style: none;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 55px;
 `;
 
-const Link = styled.li``;
+const Link = styled.li`
+  margin: 0 10px;
+`;
 
 const SocialMediaIconContainer = styled(Container)`
   display: flex;
@@ -108,7 +112,7 @@ const Location = () => {
         <Link>Home</Link>
         <Link>About</Link>
         <Link>Brand</Link>
-        <Link>Specials</Link>
+        <Link>Reviews</Link>
         <Link>Contact Us</Link>
       </LinksList>
     </Container>
