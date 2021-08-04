@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const LinksList = styled.ul`
+const ItemsList = styled.ul`
   display: flex;
   list-style: none;
   justify-content: center;
@@ -10,20 +10,38 @@ const LinksList = styled.ul`
   margin-bottom: 55px;
 `;
 
-const Link = styled.li`
+const Item = styled.li`
   margin: 0 10px;
 `;
 
-const NavigationLinks = () => {
+const Link = styled.a`
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: red;
+  }
+`;
+
+const NavigationItems = () => {
   return (
-    <LinksList>
-      <Link>Home</Link>
-      <Link>About</Link>
-      <Link>Brand</Link>
-      <Link>Reviews</Link>
-      <Link>Contact Us</Link>
-    </LinksList>
+    <ItemsList>
+      <Item>
+        <Link href="#home">Home</Link>
+      </Item>
+      <Item>
+        <Link href="#about">About</Link>
+      </Item>
+      <Item>
+        <Link href="#brand">Brand</Link>
+      </Item>
+      <Item>
+        <Link href="#reviews">Reviews</Link>
+      </Item>
+      <Item>
+        <Link href="#contact">Contact Us</Link>
+      </Item>
+    </ItemsList>
   );
 };
 
-export default NavigationLinks;
+export default NavigationItems;
