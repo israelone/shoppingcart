@@ -13,9 +13,11 @@ const Header = styled.h1`
   text-align: center;
 `;
 
-const Icon = styled.i`
+const Icon = styled.a`
   border-radius: 100%;
   margin: auto;
+  color: white;
+  text-decoration: none;
 `;
 
 const FacebookIcon = styled(Icon)``;
@@ -43,7 +45,7 @@ const LinksList = styled.ul`
   display: flex;
   list-style: none;
   justify-content: space-evenly;
-  padding:0 ;
+  padding: 0;
 `;
 
 const Link = styled.li``;
@@ -61,6 +63,10 @@ const Item = styled.li`
   border: 2px solid white;
   display: flex;
   margin: 0 10px;
+  &:hover {
+    background-color: red;
+    border-color: transparent;
+  }
 `;
 
 const IconList = styled.ul`
@@ -84,13 +90,16 @@ const Location = () => {
       <SocialMediaIconContainer>
         <IconList>
           <Item>
-            <FacebookIcon className="fab fa-facebook-f" />
+            <FacebookIcon href="#" className="fab fa-facebook-f"></FacebookIcon>
           </Item>
           <Item>
-            <TwitterIcon className="fab fa-twitter" />
+            <TwitterIcon href="#" className="fab fa-twitter"></TwitterIcon>
           </Item>
           <Item>
-            <InstagramIcon className="fab fa-instagram" />
+            <InstagramIcon
+              href="#"
+              className="fab fa-instagram"
+            ></InstagramIcon>
           </Item>
         </IconList>
       </SocialMediaIconContainer>
