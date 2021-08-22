@@ -64,10 +64,10 @@ const Contact = () => {
       <Header>Contact Us</Header>
       <FormContainer>
         <ContactForm>
-          <Input value={'Your Name'} />
-          <Input value={'Email'} />
-          <Input value={'Phone'} />
-          <Input value={'Message'} />
+          <Input placeholder={'Your Name'} />
+          <Input placeholder={'Email'} />
+          <Input placeholder={'Phone'} />
+          <Input style={{ height: '100px' }} placeholder={'Message'} />
           <SendButton>Send</SendButton>
         </ContactForm>
       </FormContainer>
