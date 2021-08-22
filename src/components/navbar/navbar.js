@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import LogoPicture from '../../assets/images/Logo/logo.png';
-// Everything commented out is for laptop media size
+
 //Missing background image for navbar @media screen and (min-width: 575px) {
 const Icon = styled.i``;
 
@@ -66,7 +66,7 @@ const ListElement = styled.li`
 
 const Link = styled.a`
   @media screen and (min-width: 930px) {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
   }
 `;
@@ -142,10 +142,14 @@ const LogoContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
   flex-direction: column;
+
+${'' /* Media query for mobile device */}
   @media screen and (min-width: 575px) {
     height: 60px;
     justify-content: space-around;
   }
+
+${'' /* Media query for laptop view */}
   @media screen and (min-width: 930px) {
     position: relative;
     height: 100%;
@@ -180,7 +184,13 @@ const LogoContainer = styled.div`
     }
   }
 `;
-const ContactList = styled.ul``;
+const ContactList = styled.ul`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  color: white;
+`;
 const ContactItem = styled.li``;
 
 const ContactInfoContainer = styled.div`
@@ -327,13 +337,17 @@ const NavBar = () => {
             </List>
           </NavigationContainer>
           <ContactInfoContainer>
-            {/* <ContactList>
+            <ContactList>
               <ContactItem className="fas fa-phone-volume">
-                uy236776346734
+                {'(+1)9876543109'}
               </ContactItem>
-              <ContactItem className="fas fa-envelope"></ContactItem>
-              <ContactItem className="fas fa-map-marker-alt"></ContactItem>
-            </ContactList> */}
+              <ContactItem className="fas fa-envelope">
+                demo@pomato.com
+              </ContactItem>
+              <ContactItem className="fas fa-map-marker-alt">
+                Location
+              </ContactItem>
+            </ContactList>
           </ContactInfoContainer>
         </>
       )}
