@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import LogoPicture from '../../assets/images/Logo/logo.png';
-
+import { Link } from 'react-router-dom';
 //Missing background image for navbar @media screen and (min-width: 575px) {
 const Icon = styled.i``;
 
@@ -64,7 +64,7 @@ const ListElement = styled.li`
   transition: padding 1s;
 `;
 
-const Link = styled.a`
+const AnchorLink = styled.a`
   @media screen and (min-width: 930px) {
     font-size: 18px;
     font-weight: 500;
@@ -261,7 +261,9 @@ const NavBar = () => {
   return (
     <Container>
       <LogoContainer>
-        <Logo src={LogoPicture}></Logo>
+        <Link to="/">
+          <Logo src={LogoPicture}></Logo>
+        </Link>
       </LogoContainer>
       {screenSize < 930 ? (
         <NavigationContainer>
@@ -276,31 +278,31 @@ const NavBar = () => {
               showMenu={showMenu ? '10px 0 10px 10px' : '0'}
               animation={showMenu ? 'initial' : '0'}
             >
-              <Link>Home</Link>
+              <AnchorLink>Home</AnchorLink>
             </ListElement>
             <ListElement
               showMenu={showMenu ? '10px 0 10px 10px' : '0'}
               animation={showMenu ? 'initial' : '0'}
             >
-              <Link>About</Link>
+              <AnchorLink>About</AnchorLink>
             </ListElement>
             <ListElement
               showMenu={showMenu ? '10px 0 10px 10px' : '0'}
               animation={showMenu ? 'initial' : '0'}
             >
-              <Link>Brand</Link>
+              <AnchorLink>Brand</AnchorLink>
             </ListElement>
             <ListElement
               showMenu={showMenu ? '10px 0 10px 10px' : '0'}
               animation={showMenu ? 'initial' : '0'}
             >
-              <Link>Specials</Link>
+              <AnchorLink>Specials</AnchorLink>
             </ListElement>
             <ListElement
               showMenu={showMenu ? '10px 0 10px 10px' : '0'}
               animation={showMenu ? 'initial' : '0'}
             >
-              <Link>Contact Us</Link>
+              <AnchorLink>Contact Us</AnchorLink>
             </ListElement>
             <ListElement
               showMenu={showMenu ? '10px 0 10px 10px' : '0'}
@@ -316,19 +318,21 @@ const NavBar = () => {
           <NavigationContainer>
             <List>
               <ListElement>
-                <Link>Home</Link>
+                <Link>
+                  <AnchorLink>Home</AnchorLink>
+                </Link>
               </ListElement>
               <ListElement>
-                <Link>About</Link>
+                <AnchorLink>About</AnchorLink>
               </ListElement>
               <ListElement>
-                <Link>Brand</Link>
+                <AnchorLink>Brand</AnchorLink>
               </ListElement>
               <ListElement>
-                <Link>Specials</Link>
+                <AnchorLink>Specials</AnchorLink>
               </ListElement>
               <ListElement>
-                <Link>Contact Us</Link>
+                <AnchorLink>Contact Us</AnchorLink>
               </ListElement>
               <ListElement>
                 <Icon className="fas fa-shopping-cart"></Icon>
