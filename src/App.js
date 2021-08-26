@@ -8,7 +8,8 @@ import Brand from './components/brand/brand';
 import Reviews from './components/reviews/reviews';
 import Contact from './components/contact/contact';
 import Location from './components/location/location';
-
+import Carousel from './components/home/Carousel/carousel';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 const products = [
   {
     name: '',
@@ -56,17 +57,33 @@ const products = [
 
 function App() {
   return (
-    // <StoreContext value={{ products }}>
-    <>
+    <Router>
       <NavBar />
-      <Home />
-      <About />
-      <Brand />
-      <Reviews />
-      <Contact />
-      <Location />
-    </>
-    // </StoreContext>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/brand">
+          <Brand />
+        </Route>
+        <Route path="*">{/* <Error /> */}</Route>
+      </Switch>
+    </Router>
+    // // <StoreContext value={{ products }}>
+
+    //   {/* <Carousel></Carousel> */}
+
+    //
+    //   {/* <About />
+    //   <Brand />
+    //   <Reviews />
+    //   <Contact />
+    //   <Location /> */}
+
+    // {/* // </StoreContext> */}
   );
 }
 
