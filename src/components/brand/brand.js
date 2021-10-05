@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import Product from './product/product';
-
+import{ StoreContext }from '../../context/context'
 const Container = styled.div``;
 
 const Header = styled.h1`
@@ -26,14 +26,14 @@ const ProductsContainer = styled.div`
 `;
 
 const Brand = () => {
+  const products = useContext(StoreContext);
+  console.log(products)
   return (
     <Container>
       <Header>Our Brand</Header>
-      <ProductsContainer>
-        <Product />
-        <Product />
-        <Product />
-      </ProductsContainer>
+      <ProductsContainer>{products.value.products.map((product)=>{
+return <Product productInfo={product}/>
+      })}</ProductsContainer>
     </Container>
   );
 };

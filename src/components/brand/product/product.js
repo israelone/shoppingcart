@@ -47,8 +47,8 @@ const Product = (props) => {
   return (
     <Container>
       <ProductImage src={CellPhone} />
-      <ProductTitle>$100</ProductTitle>
-      <ProductPrice>Name</ProductPrice>
+      <ProductTitle>${props.productInfo.price}</ProductTitle>
+      <ProductPrice>{props.productInfo.name}</ProductPrice>
       <RatingContainer>
         <Rating className={'fas fa-star'} />
         <Rating className={'fas fa-star'} />
