@@ -64,7 +64,12 @@ const ListElement = styled.li`
   transition: padding 1s;
 `;
 
-const AnchorLink = styled.a`
+const AnchorLink = styled(Link)`
+  text-decoration: none;
+  &:visited {
+    color: white;
+    text-decoration: none;
+  }
   @media screen and (min-width: 930px) {
     font-size: 18px;
     font-weight: 500;
@@ -278,31 +283,31 @@ const NavBar = () => {
               showMenu={showMenu ? '10px 0 10px 10px' : '0'}
               animation={showMenu ? 'initial' : '0'}
             >
-              <AnchorLink>Home</AnchorLink>
+              <AnchorLink to="/">Home</AnchorLink>
             </ListElement>
             <ListElement
               showMenu={showMenu ? '10px 0 10px 10px' : '0'}
               animation={showMenu ? 'initial' : '0'}
             >
-              <AnchorLink>About</AnchorLink>
+              <AnchorLink to="/about">About</AnchorLink>
             </ListElement>
             <ListElement
               showMenu={showMenu ? '10px 0 10px 10px' : '0'}
               animation={showMenu ? 'initial' : '0'}
             >
-              <AnchorLink>Brand</AnchorLink>
+              <AnchorLink to="/brand">Brand</AnchorLink>
             </ListElement>
             <ListElement
               showMenu={showMenu ? '10px 0 10px 10px' : '0'}
               animation={showMenu ? 'initial' : '0'}
             >
-              <AnchorLink>Specials</AnchorLink>
+              <AnchorLink to="/specials">Specials</AnchorLink>
             </ListElement>
             <ListElement
               showMenu={showMenu ? '10px 0 10px 10px' : '0'}
               animation={showMenu ? 'initial' : '0'}
             >
-              <AnchorLink>Contact Us</AnchorLink>
+              <AnchorLink to="/contactus">Contact Us</AnchorLink>
             </ListElement>
             <ListElement
               showMenu={showMenu ? '10px 0 10px 10px' : '0'}
@@ -318,21 +323,19 @@ const NavBar = () => {
           <NavigationContainer>
             <List>
               <ListElement>
-                <Link>
-                  <AnchorLink>Home</AnchorLink>
-                </Link>
+                <AnchorLink to="/">Home</AnchorLink>
               </ListElement>
               <ListElement>
-                <AnchorLink>About</AnchorLink>
+                <AnchorLink to="/about">About</AnchorLink>
               </ListElement>
               <ListElement>
-                <AnchorLink>Brand</AnchorLink>
+                <AnchorLink to="/brand">Brand</AnchorLink>
               </ListElement>
               <ListElement>
-                <AnchorLink>Specials</AnchorLink>
+                <AnchorLink to="/specials">Specials</AnchorLink>
               </ListElement>
               <ListElement>
-                <AnchorLink>Contact Us</AnchorLink>
+                <AnchorLink to="/contactus">Contact Us</AnchorLink>
               </ListElement>
               <ListElement>
                 <Icon className="fas fa-shopping-cart"></Icon>
