@@ -8,10 +8,10 @@ const Container = styled.div`
   background-color: black;
   color: white;
   padding-bottom: 5px;
+  padding-top:22px;
 `;
 
 const Header = styled.h1`
-  padding-top: 50px;
   margin-bottom: 0;
   text-align: center;
 `;
