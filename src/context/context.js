@@ -2,6 +2,7 @@ import React from 'react';
 
 export const StoreContext = React.createContext({
   value: {
+    cart: [],
     products: [
       {
         id: '1',
